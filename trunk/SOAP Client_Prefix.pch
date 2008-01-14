@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SOAP Client' target in the 'SOAP Client' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
