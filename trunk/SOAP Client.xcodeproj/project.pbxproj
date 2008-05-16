@@ -513,7 +513,10 @@
 					"$(LIBXSLT_PREFIX)",
 					"$(LIBEXSLT_PREFIX)",
 				);
+				LIBEXSLT_PREFIX = /usr/include/libexslt;
 				LIBRARY_SEARCH_PATHS = "";
+				LIBXML_PREFIX = /usr/include/libxml2;
+				LIBXSLT_PREFIX = /usr/include/libxslt;
 				MACH_O_TYPE = mh_execute;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
@@ -530,7 +533,10 @@
 					"$(LIBXSLT_PREFIX)",
 					"$(LIBEXSLT_PREFIX)",
 				);
+				LIBEXSLT_PREFIX = /usr/include/libexslt;
 				LIBRARY_SEARCH_PATHS = "";
+				LIBXML_PREFIX = /usr/include/libxml2;
+				LIBXSLT_PREFIX = /usr/include/libxslt;
 				MACH_O_TYPE = mh_execute;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
