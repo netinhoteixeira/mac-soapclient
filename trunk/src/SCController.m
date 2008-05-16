@@ -771,7 +771,8 @@ static AGRegex *regex;
 	
 	// get final url before auth
 	NSURL *finalURL = (NSURL *)CFReadStreamCopyProperty(stream, kCFStreamPropertyHTTPFinalURL);
-	(*finalURLString) = [url absoluteString];
+	(*finalURLString) = [finalURL absoluteString];
+	[finalURL autorelease];
 	
 	// check for auth denied
 	UInt32 resStatusCode = CFHTTPMessageGetResponseStatusCode(res);
@@ -822,8 +823,8 @@ static AGRegex *regex;
 
 	// get final url again in case it changed during auth
 	finalURL = (NSURL *)CFReadStreamCopyProperty(stream, kCFStreamPropertyHTTPFinalURL);
-	(*finalURLString) = [url absoluteString];
-	[url autorelease];
+	(*finalURLString) = [finalURL absoluteString];
+	[finalURL autorelease];
 	
 leave:
 	//close stream
