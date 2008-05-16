@@ -8,6 +8,7 @@
 
 #import "SCDocument.h"
 #import "SCController.h"
+#import "SOAPCommand.h"
 
 @interface SCDocument (Private)
 @end
