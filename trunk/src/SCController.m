@@ -1346,11 +1346,10 @@ leave:
 	if (offset == 0) {
 		NSRect r = [[self window] frame];
 		id innerHeight = [[WSDLWebView windowScriptObject] evaluateWebScript:InnerHeightScript];
-		int i = [innerHeight intValue];
-		if (!innerHeight || [innerHeight isKindOfClass:[WebUndefined class]] || 0 == i) {
+		if (!innerHeight || [innerHeight isKindOfClass:[WebUndefined class]]) {
 			return r.size.height - 130;
 		} else {
-			return i + 75;
+			return [innerHeight intValue] + 75;
 		}
 	}
 	return proposedMax;
