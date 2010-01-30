@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70DBE2E91114DC85000B0D6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DBE2E71114DC85000B0D6B /* MainMenu.xib */; };
+		70DBE2EE1114DCA5000B0D6B /* SCWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DBE2EC1114DCA5000B0D6B /* SCWindow.xib */; };
+		70DBE2F21114DCBD000B0D6B /* WSDLViewWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DBE2F01114DCBD000B0D6B /* WSDLViewWindow.xib */; };
+		70DBE2F81114DCF4000B0D6B /* PreferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DBE2F61114DCF4000B0D6B /* PreferenceWindow.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
-		8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
-		8D15AC2E0486D014006FF6A4 /* SCWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* SCWindow.nib */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
@@ -45,10 +47,8 @@
 		D37F2ACD0AEB2BC300FC6A84 /* SOAPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D37F2ACC0AEB2BC300FC6A84 /* SOAPCommand.m */; };
 		D3A9A16B0AEC69FF00689DD5 /* SOAPServiceWSCoreImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A16A0AEC69FF00689DD5 /* SOAPServiceWSCoreImpl.m */; };
 		D3B430C70B1E22EF000D6112 /* WSDLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B430C50B1E22EF000D6112 /* WSDLViewController.m */; };
-		D3B430D10B1E23A1000D6112 /* WSDLViewWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = D3B430CF0B1E23A1000D6112 /* WSDLViewWindow.nib */; };
 		D3B430EC0B1E2433000D6112 /* BaseWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B430EA0B1E2433000D6112 /* BaseWindowController.m */; };
 		D3B431D30B1E51BE000D6112 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B431D10B1E51BE000D6112 /* PreferenceController.m */; };
-		D3B432370B1E55E9000D6112 /* PreferenceWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = D3B432350B1E55E9000D6112 /* PreferenceWindow.nib */; };
 		D3B877310B0119C700382D9D /* ComplexType.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8772F0B0119C700382D9D /* ComplexType.m */; };
 		D3B87AC00B0173B100382D9D /* MySOAPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B87ABE0B0173B100382D9D /* MySOAPUtils.m */; };
 /* End PBXBuildFile section */
@@ -58,12 +58,14 @@
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/SCWindow.nib; sourceTree = "<group>"; };
-		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* SOAP Client_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SOAP Client_Prefix.pch"; sourceTree = "<group>"; };
+		70DBE2E81114DC85000B0D6B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		70DBE2ED1114DCA5000B0D6B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SCWindow.xib; sourceTree = "<group>"; };
+		70DBE2F11114DCBD000B0D6B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/WSDLViewWindow.xib; sourceTree = "<group>"; };
+		70DBE2F71114DCF4000B0D6B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PreferenceWindow.xib; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* SOAP Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOAP Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D312D0690AEF00660094B3E5 /* file.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = file.icns; path = res/file.icns; sourceTree = "<group>"; };
@@ -79,8 +81,8 @@
 		D34DD7E60B07AB5600B9E393 /* SimpleType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleType.m; path = src/SimpleType.m; sourceTree = "<group>"; };
 		D351FF500AED321900BBEAE4 /* PrettyPrinter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PrettyPrinter.h; path = src/PrettyPrinter.h; sourceTree = "<group>"; };
 		D351FF510AED321900BBEAE4 /* PrettyPrinter.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PrettyPrinter.m; path = src/PrettyPrinter.m; sourceTree = "<group>"; };
-		D36CEB970AF0460700698B25 /* headerNames.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = headerNames.plist; path = res/headerNames.plist; sourceTree = "<group>"; };
-		D36CEB980AF0460700698B25 /* headerValues.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = headerValues.plist; path = res/headerValues.plist; sourceTree = "<group>"; };
+		D36CEB970AF0460700698B25 /* headerNames.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = headerNames.plist; path = res/headerNames.plist; sourceTree = "<group>"; };
+		D36CEB980AF0460700698B25 /* headerValues.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = headerValues.plist; path = res/headerValues.plist; sourceTree = "<group>"; };
 		D36CECA50AF058C400698B25 /* NSDictionary+HTTPHeaders.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+HTTPHeaders.h"; path = "src/NSDictionary+HTTPHeaders.h"; sourceTree = "<group>"; };
 		D36CECA60AF058C400698B25 /* NSDictionary+HTTPHeaders.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+HTTPHeaders.m"; path = "src/NSDictionary+HTTPHeaders.m"; sourceTree = "<group>"; };
 		D37F27C80AEAFD7000FC6A84 /* SCDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCDocument.h; path = src/SCDocument.h; sourceTree = "<group>"; };
@@ -116,12 +118,10 @@
 		D3A9A16A0AEC69FF00689DD5 /* SOAPServiceWSCoreImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOAPServiceWSCoreImpl.m; path = src/SOAPServiceWSCoreImpl.m; sourceTree = "<group>"; };
 		D3B430C40B1E22EF000D6112 /* WSDLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSDLViewController.h; path = src/WSDLViewController.h; sourceTree = "<group>"; };
 		D3B430C50B1E22EF000D6112 /* WSDLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSDLViewController.m; path = src/WSDLViewController.m; sourceTree = "<group>"; };
-		D3B430D00B1E23A1000D6112 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/WSDLViewWindow.nib; sourceTree = "<group>"; };
 		D3B430E90B1E2433000D6112 /* BaseWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseWindowController.h; path = src/BaseWindowController.h; sourceTree = "<group>"; };
 		D3B430EA0B1E2433000D6112 /* BaseWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseWindowController.m; path = src/BaseWindowController.m; sourceTree = "<group>"; };
 		D3B431D00B1E51BE000D6112 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferenceController.h; path = src/PreferenceController.h; sourceTree = "<group>"; };
 		D3B431D10B1E51BE000D6112 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferenceController.m; path = src/PreferenceController.m; sourceTree = "<group>"; };
-		D3B432360B1E55E9000D6112 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PreferenceWindow.nib; sourceTree = "<group>"; };
 		D3B8772E0B0119C700382D9D /* ComplexType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComplexType.h; path = src/ComplexType.h; sourceTree = "<group>"; };
 		D3B8772F0B0119C700382D9D /* ComplexType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComplexType.m; path = src/ComplexType.m; sourceTree = "<group>"; };
 		D3B87ABD0B0173B100382D9D /* MySOAPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySOAPUtils.h; path = src/MySOAPUtils.h; sourceTree = "<group>"; };
@@ -221,10 +221,10 @@
 				D3229B620AFBC0D3006EB85A /* wsdl2html.js */,
 				D37F27DA0AEAFDCB00FC6A84 /* appl.icns */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
-				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
-				2A37F4B4FDCFA73011CA2CEA /* SCWindow.nib */,
-				D3B430CF0B1E23A1000D6112 /* WSDLViewWindow.nib */,
-				D3B432350B1E55E9000D6112 /* PreferenceWindow.nib */,
+				70DBE2E71114DC85000B0D6B /* MainMenu.xib */,
+				70DBE2EC1114DCA5000B0D6B /* SCWindow.xib */,
+				70DBE2F01114DCBD000B0D6B /* WSDLViewWindow.xib */,
+				70DBE2F61114DCF4000B0D6B /* PreferenceWindow.xib */,
 				8D15AC360486D014006FF6A4 /* Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
 			);
@@ -358,8 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
-				8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */,
-				8D15AC2E0486D014006FF6A4 /* SCWindow.nib in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				D37F27DB0AEAFDCB00FC6A84 /* appl.icns in Resources */,
 				D37F28310AEB025C00FC6A84 /* prettyxml.xsl in Resources */,
@@ -370,8 +368,10 @@
 				D36CEB990AF0460700698B25 /* headerNames.plist in Resources */,
 				D36CEB9A0AF0460700698B25 /* headerValues.plist in Resources */,
 				D322A28B0AFDA627006EB85A /* SOAP_Client.png in Resources */,
-				D3B430D10B1E23A1000D6112 /* WSDLViewWindow.nib in Resources */,
-				D3B432370B1E55E9000D6112 /* PreferenceWindow.nib in Resources */,
+				70DBE2E91114DC85000B0D6B /* MainMenu.xib in Resources */,
+				70DBE2EE1114DCA5000B0D6B /* SCWindow.xib in Resources */,
+				70DBE2F21114DCBD000B0D6B /* WSDLViewWindow.xib in Resources */,
+				70DBE2F81114DCF4000B0D6B /* PreferenceWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,22 +419,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2A37F4B4FDCFA73011CA2CEA /* SCWindow.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A37F4B5FDCFA73011CA2CEA /* English */,
-			);
-			name = SCWindow.nib;
-			sourceTree = "<group>";
-		};
-		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A37F4B7FDCFA73011CA2CEA /* English */,
-			);
-			name = MainMenu.nib;
-			sourceTree = "<group>";
-		};
 		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,20 +427,36 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		D3B430CF0B1E23A1000D6112 /* WSDLViewWindow.nib */ = {
+		70DBE2E71114DC85000B0D6B /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D3B430D00B1E23A1000D6112 /* English */,
+				70DBE2E81114DC85000B0D6B /* English */,
 			);
-			name = WSDLViewWindow.nib;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
-		D3B432350B1E55E9000D6112 /* PreferenceWindow.nib */ = {
+		70DBE2EC1114DCA5000B0D6B /* SCWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D3B432360B1E55E9000D6112 /* English */,
+				70DBE2ED1114DCA5000B0D6B /* English */,
 			);
-			name = PreferenceWindow.nib;
+			name = SCWindow.xib;
+			sourceTree = "<group>";
+		};
+		70DBE2F01114DCBD000B0D6B /* WSDLViewWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70DBE2F11114DCBD000B0D6B /* English */,
+			);
+			name = WSDLViewWindow.xib;
+			sourceTree = "<group>";
+		};
+		70DBE2F61114DCF4000B0D6B /* PreferenceWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70DBE2F71114DCF4000B0D6B /* English */,
+			);
+			name = PreferenceWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -506,6 +506,7 @@
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -526,6 +527,7 @@
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
