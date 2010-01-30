@@ -4,6 +4,7 @@
 
 @interface AppDelegate : NSObject
 {
+    NSWindowController *prefsWindowController;
 }
 - (IBAction)showPreferences:(id)sender;
 - (BOOL)canExecute;

@@ -17,16 +17,30 @@
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
 	[defaults registerDefaults:defaultValues];
+    
+    xmlInitParser();
 }
 
+- (void)applicationWillTerminate:(NSNotification *)notification
+{
+    xmlCleanupParser();
+}
+
+- (void)dealloc
+{
+    [prefsWindowController release];
+    [super dealloc];
+}
 
 #pragma mark -
 #pragma mark Actions
 
 - (IBAction)showPreferences:(id)sender;
 {
-	NSWindowController *c = [[PreferenceController alloc] init];
-	[c showWindow:self];
+    if (!prefsWindowController) {
+        prefsWindowController = [[PreferenceController alloc] init];
+    }
+	[prefsWindowController showWindow:self];
 }
 
 

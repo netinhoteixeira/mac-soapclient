@@ -304,8 +304,6 @@ leave:
 	if (resultStr)
 		free(resultStr);
 	
-	xmlCleanupParser();
-	
 	[pool release];
 }
 
