@@ -520,7 +520,7 @@
 				LIBXSLT_PREFIX = /usr/include/libxslt;
 				MACH_O_TYPE = mh_execute;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Debug;
 		};
@@ -541,7 +541,7 @@
 				LIBXSLT_PREFIX = /usr/include/libxslt;
 				MACH_O_TYPE = mh_execute;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Release;
 		};
