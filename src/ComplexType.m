@@ -119,7 +119,7 @@ static NSString * const MethodXQuery = @"//*:fakeMethodName/*";
 																  NULL);
 
 	NSString *str = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-	NSXMLDocument *fakeDoc = [[[NSXMLDocument alloc] initWithData:data options:nil error:nil] autorelease];
+	NSXMLDocument *fakeDoc = [[[NSXMLDocument alloc] initWithData:data options:0 error:nil] autorelease];
 	NSArray *els = [fakeDoc objectsForXQuery:MethodXQuery error:nil];
 	NSEnumerator *e = [els objectEnumerator];
 	NSXMLElement *child; 

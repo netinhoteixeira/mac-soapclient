@@ -74,7 +74,7 @@ static NSString * const errorFormat = @"<b style='font-family:LucidaGrande; colo
 	
 	[str replaceOccurrencesOfString:@"<"
 						 withString:@"&lt;"
-							options:nil
+							options:0
 							  range:NSMakeRange(0, [str length])];
 	
 	return [NSString stringWithFormat:errorFormat, str];

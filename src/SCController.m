@@ -654,7 +654,7 @@ static AGRegex *regex;
 		}
 	} else {
 		result = [NSData dataWithContentsOfFile:WSDLURLString
-										options:nil
+										options:0
 										  error:&err];
 		
 	}
@@ -1055,7 +1055,7 @@ leave:
 
 - (void)addAuthToKeychainItem:(SecKeychainItemRef)keychainItemRef forURL:(NSURL *)url realm:(NSString *)realm forProxy:(BOOL)forProxy;
 {
-	OSStatus status = nil;
+	OSStatus status = 0;
 	NSString *scheme = [url scheme];
 	NSString *host = [url host];
 	int port = [[url port] intValue];
@@ -1122,7 +1122,7 @@ leave:
 	NSMutableString *str = [NSMutableString stringWithString:msg];
 	[str replaceOccurrencesOfString:@"<"
 						 withString:@"&lt;"
-							options:nil
+							options:0
 							  range:NSMakeRange(0, [msg length])];
 	
 	[[WSDLWebView mainFrame] loadHTMLString:[NSString stringWithFormat:PreFormat, str]
