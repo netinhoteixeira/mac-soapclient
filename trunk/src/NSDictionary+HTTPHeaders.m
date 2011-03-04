@@ -17,14 +17,14 @@ static NSString * const Whitespace = @" ";
 {
 	NSMutableString *result = [NSMutableString string];
 
-	id key;
-	NSString *value;
+	id key = nil;
+	NSString *value = nil;
 	NSEnumerator *e = [self keyEnumerator];
 	while (key = [e nextObject]) {
 		if (![key isEqualToString:Whitespace]) {
 			value = [self valueForKey:key];
 			if ([key isEqualToString:@"User-Agent"]) {
-				int i = [value rangeOfString:@" --- "].location;
+				NSUInteger i = [value rangeOfString:@" --- "].location;
 				if (NSNotFound != i) {
 					value = [value substringFromIndex:i+5];
 				}

@@ -127,9 +127,9 @@
 		
 		while (401 == resStatusCode || 407 == resStatusCode) {
 			
-			NSDictionary *headers = [(NSDictionary *)CFHTTPMessageCopyAllHeaderFields(res) autorelease];
+			//NSDictionary *headers = [(NSDictionary *)CFHTTPMessageCopyAllHeaderFields(res) autorelease];
 			//NSLog(@"headers: %@", headers);
-			NSString *line = [(NSString *)CFHTTPMessageCopyResponseStatusLine(res) autorelease];
+			//NSString *line = [(NSString *)CFHTTPMessageCopyResponseStatusLine(res) autorelease];
 			//NSLog(@"line: %@", line);
 
 			// create a custom HTTP req to which we will add auth creds
