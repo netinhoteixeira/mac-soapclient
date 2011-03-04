@@ -49,7 +49,7 @@
 	}
 	SOAPCommand *cmd = [controller command];
 	if (!cmd) {
-		cmd = [[SOAPCommand alloc] init];
+		cmd = [[[SOAPCommand alloc] init] autorelease];
 	}
 	[cmd setRequestHeaders:[controller requestHeaders]];
 	[cmd setRequestHeaderOrder:[controller requestHeaderOrder]];

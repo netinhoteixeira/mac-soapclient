@@ -15,7 +15,7 @@
 @protocol SOAPService;
 @class PrettyPrinter;
 
-@interface SCController : BaseWindowController {
+@interface SCController : BaseWindowController <NSComboBoxCellDataSource> {
 	IBOutlet WebView *WSDLWebView;
 	IBOutlet NSTextField *WSDLTextField;
 	IBOutlet NSTableView *headersTable;

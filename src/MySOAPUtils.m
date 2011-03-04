@@ -20,10 +20,10 @@ CFDictionaryRef checkDictionaryForIntegers(NSDictionary *paramsIn)
 	CFMutableDictionaryRef result = CFDictionaryCreateMutableCopy(kCFAllocatorDefault,
 																  [paramsIn count],
 																  (CFDictionaryRef)paramsIn);
-	NSString *key;
-	NSString *desc;
-	NSRange r;
-	id value;
+	NSString *key = nil;
+	NSString *desc = nil;
+	NSRange r = NSMakeRange(0, 0);
+	id value = nil;
 	NSEnumerator *e = [paramsIn keyEnumerator];
 	while (key = [e nextObject]) {
 		value = [paramsIn objectForKey:key];
@@ -36,6 +36,7 @@ CFDictionaryRef checkDictionaryForIntegers(NSDictionary *paramsIn)
 				int j = [value intValue];
 				CFNumberRef num = CFNumberCreate(kCFAllocatorDefault,kCFNumberSInt32Type,&j);
 				CFDictionarySetValue(result, key, num);
+                CFRelease(num);
 			}
 		} else if ([value isKindOfClass:[MyBoolean class]]) {
 			CFBooleanRef b = ([value boolValue]) ? kCFBooleanTrue : kCFBooleanFalse;
@@ -57,14 +58,15 @@ CFDictionaryRef checkDictionaryForIntegers(NSDictionary *paramsIn)
 
 CFArrayRef checkArrayForIntegers(NSArray *paramsIn)
 {
-	// leaking!!!
 	CFMutableArrayRef result = CFArrayCreateMutableCopy(kCFAllocatorDefault,
 														[paramsIn count],
 														(CFArrayRef)paramsIn);
-	NSString *desc;
-	NSRange r;
+    [(id)result autorelease];
+
+	NSString *desc = nil;
+	NSRange r = NSMakeRange(0, 0);
 	CFIndex index = 0;
-	id value;
+	id value = nil;
 	NSEnumerator *e = [paramsIn objectEnumerator];
 	while (value = [e nextObject]) {
 		if ([value isKindOfClass:[NSNumber class]]) {
@@ -76,6 +78,7 @@ CFArrayRef checkArrayForIntegers(NSArray *paramsIn)
 				int j = [value intValue];
 				CFNumberRef num = CFNumberCreate(kCFAllocatorDefault,kCFNumberSInt32Type,&j);
 				CFArraySetValueAtIndex(result, index, num);
+                CFRelease(num);
 			}
 		} else if ([value isKindOfClass:[MyBoolean class]]) {
 			CFBooleanRef b = ([value boolValue]) ? kCFBooleanTrue : kCFBooleanFalse;

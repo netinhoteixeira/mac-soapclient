@@ -64,7 +64,7 @@ static AGRegex *regex;
 
 - (void)setupComboBoxDataSourceInfo;
 - (void)registerForNotifications;
-- (NSComboBoxCell *)comboBoxCellWithTag:(int)tag;
+- (NSComboBoxCell *)newComboBoxCellWithTag:(int)tag;
 - (void)setupHeadersTable;
 - (NSImage *)plusImage;
 - (NSImage *)minusImage;
@@ -337,8 +337,8 @@ static AGRegex *regex;
 	[headersTable setTarget:self];
 	[headersTable setAction:@selector(handleTableClicked:)];
 	
-	[[headersTable tableColumnWithIdentifier:@"name"] setDataCell:[self comboBoxCellWithTag:0]];
-	[[headersTable tableColumnWithIdentifier:@"value"] setDataCell:[self comboBoxCellWithTag:1]];
+	[[headersTable tableColumnWithIdentifier:@"name"] setDataCell:[[self newComboBoxCellWithTag:0] autorelease]];
+	[[headersTable tableColumnWithIdentifier:@"value"] setDataCell:[[self newComboBoxCellWithTag:1] autorelease]];
 	
 	NSButtonCell *cell = [[headersTable tableColumnWithIdentifier:@"insertButton"] dataCell];
 	[cell setTarget:self];
@@ -394,7 +394,7 @@ static AGRegex *regex;
 }
 
 
-- (NSComboBoxCell *)comboBoxCellWithTag:(int)tag;
+- (NSComboBoxCell *)newComboBoxCellWithTag:(int)tag;
 {
 	NSComboBoxCell *cbCell = [[NSComboBoxCell alloc] init];
 	[cbCell setEditable:YES];
@@ -483,7 +483,7 @@ static AGRegex *regex;
 			[result removeObjectForKey:key];
 		} else if ([[key lowercaseString] isEqualToString:@"user-agent"]) {
 			NSString *val = [result objectForKey:key];
-			int index = [val rangeOfString:@" --- "].location;
+			NSUInteger index = [val rangeOfString:@" --- "].location;
 			if (NSNotFound != index) {
 				[result setObject:[val substringFromIndex:index+5] forKey:key];
 			}
@@ -569,14 +569,14 @@ static AGRegex *regex;
 			value = [[[MyBoolean alloc] init] autorelease];
 			[value setBoolValue:boolValue];
 		} else if ([jsClass isEqualToString:@"SimpleType"]) {
-			id simpleType = [[[SimpleType alloc] init] autorelease];
+			SimpleType *simpleType = [[[SimpleType alloc] init] autorelease];
 			[simpleType setValue:str];
 			[simpleType setTypeUri:[value valueForKey:@"__typeUri"]];
 			[simpleType setTypeName:[value valueForKey:@"__typeName"]];
 			[simpleType setLocalName:[value valueForKey:@"__localName"]];
 			value = [NSArray arrayWithObject:simpleType];
 		} else if ([jsClass isEqualToString:@"ComplexType"]) {
-			id customObj = [[[ComplexType alloc] init] autorelease];
+			ComplexType *customObj = [[[ComplexType alloc] init] autorelease];
 			[customObj setTypeName:[value valueForKey:@"__typeName"]];
 			[customObj setPrefix:[value valueForKey:@"__prefix"]];
 			[customObj setLocalName:[value valueForKey:@"__localName"]];
@@ -906,7 +906,7 @@ leave:
 	NSLog(@"realm: %@", realm);
 	NSLog(@"domains: %@", domains);
 	
-	NSString *authHeaderVal = [self valueForKey:@"www-authenticate" fromHeaders:headers];
+	//NSString *authHeaderVal = [self valueForKey:@"www-authenticate" fromHeaders:headers];
 	
 	//if ([[scheme lowercaseString] isEqualToString:@"ntlm"] && count > 1) {
 	//	return req;
@@ -1019,6 +1019,9 @@ leave:
 
 - (NSString *)accountNameFromKeychainItem:(SecKeychainItemRef)item;
 {
+    
+    NSString *result = nil;
+    
 	OSStatus err = 0;
 	UInt32 infoTag = kSecAccountItemAttr;
 	UInt32 infoFmt = 0; // string
@@ -1043,7 +1046,7 @@ leave:
 	if (authAttrList->attr->length > 1024) { 
 		goto leave; 
 	}
-	NSString *result = [NSString stringWithUTF8String:authAttrList->attr->data];
+	result = [NSString stringWithUTF8String:authAttrList->attr->data];
 	
 leave:
 	if (authAttrList) 
@@ -1059,9 +1062,7 @@ leave:
 	NSString *scheme = [url scheme];
 	NSString *host = [url host];
 	int port = [[url port] intValue];
-	NSString *path = [url path];
 	NSString *label = [NSString stringWithFormat:@"%@ (%@)", host, username];
-	NSString *urlString = [url absoluteString];
 	NSString *comment = @"created by SOAP Client";
 
 	NSData *passwordData = [password dataUsingEncoding:NSUTF8StringEncoding];
@@ -1225,12 +1226,11 @@ leave:
 - (void)webView:(WebView *)sender willPerformDragDestinationAction:(WebDragDestinationAction)action forDraggingInfo:(id <NSDraggingInfo>)draggingInfo;
 {
 	NSPasteboard *pboard = [draggingInfo draggingPasteboard];
-	NSString *filename;
-	int index;
+	NSString *filename = nil;
 	
-	if ((index = [[pboard types] indexOfObject:NSFilenamesPboardType]) != NSNotFound) {
+	if (NSNotFound != [[pboard types] indexOfObject:NSFilenamesPboardType]) {
 		filename = [[pboard propertyListForType:NSFilenamesPboardType] objectAtIndex:0];
-	} else if ((index = [[pboard types] indexOfObject:NSURLPboardType]) != NSNotFound) {
+	} else if (NSNotFound != [[pboard types] indexOfObject:NSURLPboardType]) {
 		filename = [[pboard propertyListForType:NSURLPboardType] objectAtIndex:0];
 	}
 	
@@ -1245,7 +1245,7 @@ leave:
 	if (!WSDLURLString) {
 		return nil;
 	}
-	NSMenuItem *item = [[NSMenuItem alloc] init];
+	NSMenuItem *item = [[[NSMenuItem alloc] init] autorelease];
 	[item setTarget:self];
 	[item setAction:@selector(parseWSDL:)];
 	[item setTitle:@"Re-Parse WSDL"];
@@ -1281,7 +1281,7 @@ leave:
 #pragma mark -
 #pragma mark NSComboBoxDataSource
 
-- (id)comboBoxCell:(NSComboBoxCell *)aComboBoxCell objectValueForItemAtIndex:(int)index;
+- (id)comboBoxCell:(NSComboBoxCell *)aComboBoxCell objectValueForItemAtIndex:(NSInteger)index;
 {
 	BOOL isValueCell = [aComboBoxCell tag];
 	if (isValueCell) {
@@ -1298,7 +1298,7 @@ leave:
 }
 
 
-- (int)numberOfItemsInComboBoxCell:(NSComboBoxCell *)aComboBoxCell;
+- (NSInteger)numberOfItemsInComboBoxCell:(NSComboBoxCell *)aComboBoxCell;
 {
 	BOOL isValueCell = [aComboBoxCell tag];
 	if (isValueCell) {
@@ -1306,7 +1306,8 @@ leave:
 		if ([self isNameRequiringTodaysDateString:name]) {
 			return 1;
 		} else {
-			return [[requestHeaderValues objectForKey:name] count];
+            NSArray *vals = [requestHeaderValues objectForKey:name];
+			return [vals count];
 		}
 	} else {
 		return [requestHeaderNames count];

@@ -112,24 +112,24 @@ static NSString * const MethodXQuery = @"//*:fakeMethodName/*";
 											  (WSProtocolHandlerSerializationProcPtr)myProtocolHandlerSerializationProcFunc,
 											  (WSClientContext *)NULL);
 
-	NSData *data = (NSData *)WSProtocolHandlerCopyRequestDocument(Handler,
-																  (CFStringRef)MethodName,
-																  (CFDictionaryRef)params,
-																  (CFArrayRef)propOrder,
-																  NULL);
+	NSData *data = [(id)WSProtocolHandlerCopyRequestDocument(Handler,
+                                                             (CFStringRef)MethodName,
+                                                             (CFDictionaryRef)params,
+                                                             (CFArrayRef)propOrder,
+                                                             NULL) autorelease];
 
-	NSString *str = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+	//NSString *str = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
 	NSXMLDocument *fakeDoc = [[[NSXMLDocument alloc] initWithData:data options:0 error:nil] autorelease];
 	NSArray *els = [fakeDoc objectsForXQuery:MethodXQuery error:nil];
 	NSEnumerator *e = [els objectEnumerator];
-	NSXMLElement *child; 
+	NSXMLElement *child = nil;
 	while (child = [e nextObject]) {
-		[el addChild:[child copy]];
+		[el addChild:[[child copy] autorelease]]; // ??
 	}
 	
 	[self setSerializedForm:[doc XMLString]];
 	//NSLog(@"%@", serializedForm);
-	return [serializedForm retain];
+	return serializedForm;
 }
 
 
