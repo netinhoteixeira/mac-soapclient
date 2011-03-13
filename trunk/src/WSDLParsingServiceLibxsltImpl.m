@@ -201,7 +201,7 @@ static void *regexpModuleShutdown(xsltTransformContextPtr ctxt,
 	NSString *cssPath = [[NSBundle mainBundle] pathForResource:@"wsdl2html" ofType:@"css"];
 	NSString *jsPath  = [[NSBundle mainBundle] pathForResource:@"wsdl2html" ofType:@"js"];
 	
-	NSString *docStr = [NSString stringWithFormat:[NSString stringWithContentsOfFile:xslPath], 
+	NSString *docStr = [NSString stringWithFormat:[NSString stringWithContentsOfFile:xslPath encoding:NSUTF8StringEncoding error:nil], 
 		[cssPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], 
 		[jsPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 
