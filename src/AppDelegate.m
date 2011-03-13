@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 #import "SCController.h"
 #import "PreferenceController.h"
+#import <libxml/parser.h>
 
 @interface AppDelegate (Private)
 - (SCController *)currentController;

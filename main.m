@@ -1,9 +1,9 @@
 //
 //  main.m
-//  SOAP Client
+//  SOAPClient
 //
-//  Created by Todd Ditchendorf on 10/21/06.
-//  Copyright __MyCompanyName__ 2006 . All rights reserved.
+//  Created by Todd Ditchendorf on 3/13/11.
+//  Copyright 2011 Todd Ditchendorf. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

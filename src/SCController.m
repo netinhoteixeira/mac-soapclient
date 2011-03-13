@@ -893,11 +893,11 @@ leave:
 	NSURL *url = (NSURL *)CFHTTPMessageCopyRequestURL(req);
 
 	
-	NSDictionary *headers = [(NSDictionary *)CFHTTPMessageCopyAllHeaderFields(res) autorelease];
+	//NSDictionary *headers = [(NSDictionary *)CFHTTPMessageCopyAllHeaderFields(res) autorelease];
 	//NSLog(@"res headers: %@", headers);
 
 	CFHTTPAuthenticationRef auth = CFHTTPAuthenticationCreateFromResponse(kCFAllocatorDefault, res);
-	NSString *scheme = [(NSString *)CFHTTPAuthenticationCopyMethod(auth) autorelease];
+	//NSString *scheme = [(NSString *)CFHTTPAuthenticationCopyMethod(auth) autorelease];
 	NSString *realm  = [(NSString *)CFHTTPAuthenticationCopyRealm(auth)  autorelease];
 	NSArray *domains = [(NSArray *)CFHTTPAuthenticationCopyDomains(auth) autorelease];
 	NSURL *domain = ([domains count]) ? [domains objectAtIndex:0] : nil;
@@ -1029,7 +1029,7 @@ leave:
 	SecKeychainAttributeList *authAttrList = NULL;
 	void *data;
 	UInt32 dataLen;
-	char accountName[1024];
+	//char accountName[1024];
 	
     info.count = 1;
 	info.tag = &infoTag;
@@ -1217,7 +1217,7 @@ leave:
 #pragma mark -
 #pragma mark WebUIDelegate
 
-- (unsigned)webView:(WebView *)sender dragDestinationActionMaskForDraggingInfo:(id <NSDraggingInfo>)draggingInfo;
+- (NSUInteger)webView:(WebView *)sender dragDestinationActionMaskForDraggingInfo:(id <NSDraggingInfo>)draggingInfo;
 {
 	return WebDragDestinationActionLoad;
 }
