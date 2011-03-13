@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,21 +15,24 @@
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
-		D312D06A0AEF00660094B3E5 /* file.icns in Resources */ = {isa = PBXBuildFile; fileRef = D312D0690AEF00660094B3E5 /* file.icns */; };
 		D3229AD90AFB2B1C006EB85A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3229AD70AFB2B1C006EB85A /* AppDelegate.m */; };
 		D3229B6B0AFBC13D006EB85A /* wsdl2html.js in Resources */ = {isa = PBXBuildFile; fileRef = D3229B620AFBC0D3006EB85A /* wsdl2html.js */; };
 		D3229B750AFBC1C8006EB85A /* wsdl2html.css in Resources */ = {isa = PBXBuildFile; fileRef = D3229B740AFBC1C8006EB85A /* wsdl2html.css */; };
 		D3229C830AFBD6BB006EB85A /* MyBoolean.m in Sources */ = {isa = PBXBuildFile; fileRef = D3229C820AFBD6BB006EB85A /* MyBoolean.m */; };
-		D322A28B0AFDA627006EB85A /* SOAP_Client.png in Resources */ = {isa = PBXBuildFile; fileRef = D322A28A0AFDA627006EB85A /* SOAP_Client.png */; };
 		D322A6000AFDEA35006EB85A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D322A5FF0AFDEA35006EB85A /* Security.framework */; };
 		D34DD7E80B07AB5600B9E393 /* SimpleType.m in Sources */ = {isa = PBXBuildFile; fileRef = D34DD7E60B07AB5600B9E393 /* SimpleType.m */; };
+		D351233C132D10A60008E842 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = D3512339132D10A60008E842 /* iTunesArtwork.png */; };
+		D351233D132D10A60008E842 /* soapclient.icns in Resources */ = {isa = PBXBuildFile; fileRef = D351233A132D10A60008E842 /* soapclient.icns */; };
+		D351233E132D10A60008E842 /* soapclientdoc.icns in Resources */ = {isa = PBXBuildFile; fileRef = D351233B132D10A60008E842 /* soapclientdoc.icns */; };
+		D351233F132D10A60008E842 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = D3512339132D10A60008E842 /* iTunesArtwork.png */; };
+		D3512340132D10A60008E842 /* soapclient.icns in Resources */ = {isa = PBXBuildFile; fileRef = D351233A132D10A60008E842 /* soapclient.icns */; };
+		D3512341132D10A60008E842 /* soapclientdoc.icns in Resources */ = {isa = PBXBuildFile; fileRef = D351233B132D10A60008E842 /* soapclientdoc.icns */; };
 		D351FF520AED321900BBEAE4 /* PrettyPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = D351FF510AED321900BBEAE4 /* PrettyPrinter.m */; };
 		D36CEB990AF0460700698B25 /* headerNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = D36CEB970AF0460700698B25 /* headerNames.plist */; };
 		D36CEB9A0AF0460700698B25 /* headerValues.plist in Resources */ = {isa = PBXBuildFile; fileRef = D36CEB980AF0460700698B25 /* headerValues.plist */; };
 		D36CECA70AF058C400698B25 /* NSDictionary+HTTPHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CECA60AF058C400698B25 /* NSDictionary+HTTPHeaders.m */; };
 		D37F27CA0AEAFD7000FC6A84 /* SCDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = D37F27C90AEAFD7000FC6A84 /* SCDocument.m */; };
 		D37F27CD0AEAFD7A00FC6A84 /* SCController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37F27CC0AEAFD7A00FC6A84 /* SCController.m */; };
-		D37F27DB0AEAFDCB00FC6A84 /* appl.icns in Resources */ = {isa = PBXBuildFile; fileRef = D37F27DA0AEAFDCB00FC6A84 /* appl.icns */; };
 		D37F28110AEAFF9D00FC6A84 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37F28100AEAFF9D00FC6A84 /* WebKit.framework */; };
 		D37F28310AEB025C00FC6A84 /* prettyxml.xsl in Resources */ = {isa = PBXBuildFile; fileRef = D37F282F0AEB025C00FC6A84 /* prettyxml.xsl */; };
 		D37F28320AEB025C00FC6A84 /* wsdl2html.xsl in Resources */ = {isa = PBXBuildFile; fileRef = D37F28300AEB025C00FC6A84 /* wsdl2html.xsl */; };
@@ -53,15 +56,12 @@
 		D3B87AC00B0173B100382D9D /* MySOAPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B87ABE0B0173B100382D9D /* MySOAPUtils.m */; };
 		D3D0C4C8131FF55200905509 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		D3D0C4C9131FF55200905509 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
-		D3D0C4CA131FF55200905509 /* appl.icns in Resources */ = {isa = PBXBuildFile; fileRef = D37F27DA0AEAFDCB00FC6A84 /* appl.icns */; };
 		D3D0C4CB131FF55200905509 /* prettyxml.xsl in Resources */ = {isa = PBXBuildFile; fileRef = D37F282F0AEB025C00FC6A84 /* prettyxml.xsl */; };
 		D3D0C4CC131FF55200905509 /* wsdl2html.xsl in Resources */ = {isa = PBXBuildFile; fileRef = D37F28300AEB025C00FC6A84 /* wsdl2html.xsl */; };
 		D3D0C4CD131FF55200905509 /* wsdl2html.css in Resources */ = {isa = PBXBuildFile; fileRef = D3229B740AFBC1C8006EB85A /* wsdl2html.css */; };
 		D3D0C4CE131FF55200905509 /* wsdl2html.js in Resources */ = {isa = PBXBuildFile; fileRef = D3229B620AFBC0D3006EB85A /* wsdl2html.js */; };
-		D3D0C4CF131FF55200905509 /* file.icns in Resources */ = {isa = PBXBuildFile; fileRef = D312D0690AEF00660094B3E5 /* file.icns */; };
 		D3D0C4D0131FF55200905509 /* headerNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = D36CEB970AF0460700698B25 /* headerNames.plist */; };
 		D3D0C4D1131FF55200905509 /* headerValues.plist in Resources */ = {isa = PBXBuildFile; fileRef = D36CEB980AF0460700698B25 /* headerValues.plist */; };
-		D3D0C4D2131FF55200905509 /* SOAP_Client.png in Resources */ = {isa = PBXBuildFile; fileRef = D322A28A0AFDA627006EB85A /* SOAP_Client.png */; };
 		D3D0C4D3131FF55200905509 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DBE2E71114DC85000B0D6B /* MainMenu.xib */; };
 		D3D0C4D4131FF55200905509 /* SCWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DBE2EC1114DCA5000B0D6B /* SCWindow.xib */; };
 		D3D0C4D5131FF55200905509 /* WSDLViewWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DBE2F01114DCBD000B0D6B /* WSDLViewWindow.xib */; };
@@ -112,17 +112,18 @@
 		70DBE2F71114DCF4000B0D6B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PreferenceWindow.xib; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* SOAP Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOAP Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D312D0690AEF00660094B3E5 /* file.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = file.icns; path = res/file.icns; sourceTree = "<group>"; };
 		D3229AD70AFB2B1C006EB85A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/AppDelegate.m; sourceTree = "<group>"; };
 		D3229AD80AFB2B1C006EB85A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = "<group>"; };
 		D3229B620AFBC0D3006EB85A /* wsdl2html.js */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.javascript; name = wsdl2html.js; path = res/wsdl2html.js; sourceTree = "<group>"; };
 		D3229B740AFBC1C8006EB85A /* wsdl2html.css */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = wsdl2html.css; path = res/wsdl2html.css; sourceTree = "<group>"; };
 		D3229C810AFBD6BB006EB85A /* MyBoolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyBoolean.h; path = src/MyBoolean.h; sourceTree = "<group>"; };
 		D3229C820AFBD6BB006EB85A /* MyBoolean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyBoolean.m; path = src/MyBoolean.m; sourceTree = "<group>"; };
-		D322A28A0AFDA627006EB85A /* SOAP_Client.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SOAP_Client.png; path = res/SOAP_Client.png; sourceTree = "<group>"; };
 		D322A5FF0AFDEA35006EB85A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		D34DD7E50B07AB5600B9E393 /* SimpleType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleType.h; path = src/SimpleType.h; sourceTree = "<group>"; };
 		D34DD7E60B07AB5600B9E393 /* SimpleType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleType.m; path = src/SimpleType.m; sourceTree = "<group>"; };
+		D3512339132D10A60008E842 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = res/iTunesArtwork.png; sourceTree = "<group>"; };
+		D351233A132D10A60008E842 /* soapclient.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = soapclient.icns; path = res/soapclient.icns; sourceTree = "<group>"; };
+		D351233B132D10A60008E842 /* soapclientdoc.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = soapclientdoc.icns; path = res/soapclientdoc.icns; sourceTree = "<group>"; };
 		D351FF500AED321900BBEAE4 /* PrettyPrinter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = PrettyPrinter.h; path = src/PrettyPrinter.h; sourceTree = "<group>"; };
 		D351FF510AED321900BBEAE4 /* PrettyPrinter.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = PrettyPrinter.m; path = src/PrettyPrinter.m; sourceTree = "<group>"; };
 		D36CEB970AF0460700698B25 /* headerNames.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = headerNames.plist; path = res/headerNames.plist; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		D37F27C90AEAFD7000FC6A84 /* SCDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCDocument.m; path = src/SCDocument.m; sourceTree = "<group>"; };
 		D37F27CB0AEAFD7A00FC6A84 /* SCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCController.h; path = src/SCController.h; sourceTree = "<group>"; };
 		D37F27CC0AEAFD7A00FC6A84 /* SCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCController.m; path = src/SCController.m; sourceTree = "<group>"; };
-		D37F27DA0AEAFDCB00FC6A84 /* appl.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = appl.icns; path = res/appl.icns; sourceTree = "<group>"; };
 		D37F28100AEAFF9D00FC6A84 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		D37F282F0AEB025C00FC6A84 /* prettyxml.xsl */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = prettyxml.xsl; path = res/prettyxml.xsl; sourceTree = "<group>"; };
 		D37F28300AEB025C00FC6A84 /* wsdl2html.xsl */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = wsdl2html.xsl; path = res/wsdl2html.xsl; sourceTree = "<group>"; };
@@ -271,15 +271,15 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D322A28A0AFDA627006EB85A /* SOAP_Client.png */,
+				D3512339132D10A60008E842 /* iTunesArtwork.png */,
+				D351233A132D10A60008E842 /* soapclient.icns */,
+				D351233B132D10A60008E842 /* soapclientdoc.icns */,
 				D36CEB970AF0460700698B25 /* headerNames.plist */,
 				D36CEB980AF0460700698B25 /* headerValues.plist */,
-				D312D0690AEF00660094B3E5 /* file.icns */,
 				D37F282F0AEB025C00FC6A84 /* prettyxml.xsl */,
 				D37F28300AEB025C00FC6A84 /* wsdl2html.xsl */,
 				D3229B740AFBC1C8006EB85A /* wsdl2html.css */,
 				D3229B620AFBC0D3006EB85A /* wsdl2html.js */,
-				D37F27DA0AEAFDCB00FC6A84 /* appl.icns */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				70DBE2E71114DC85000B0D6B /* MainMenu.xib */,
 				70DBE2EC1114DCA5000B0D6B /* SCWindow.xib */,
@@ -446,19 +446,19 @@
 			files = (
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
-				D37F27DB0AEAFDCB00FC6A84 /* appl.icns in Resources */,
 				D37F28310AEB025C00FC6A84 /* prettyxml.xsl in Resources */,
 				D37F28320AEB025C00FC6A84 /* wsdl2html.xsl in Resources */,
 				D3229B750AFBC1C8006EB85A /* wsdl2html.css in Resources */,
 				D3229B6B0AFBC13D006EB85A /* wsdl2html.js in Resources */,
-				D312D06A0AEF00660094B3E5 /* file.icns in Resources */,
 				D36CEB990AF0460700698B25 /* headerNames.plist in Resources */,
 				D36CEB9A0AF0460700698B25 /* headerValues.plist in Resources */,
-				D322A28B0AFDA627006EB85A /* SOAP_Client.png in Resources */,
 				70DBE2E91114DC85000B0D6B /* MainMenu.xib in Resources */,
 				70DBE2EE1114DCA5000B0D6B /* SCWindow.xib in Resources */,
 				70DBE2F21114DCBD000B0D6B /* WSDLViewWindow.xib in Resources */,
 				70DBE2F81114DCF4000B0D6B /* PreferenceWindow.xib in Resources */,
+				D351233F132D10A60008E842 /* iTunesArtwork.png in Resources */,
+				D3512340132D10A60008E842 /* soapclient.icns in Resources */,
+				D3512341132D10A60008E842 /* soapclientdoc.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,19 +468,19 @@
 			files = (
 				D3D0C4C8131FF55200905509 /* Credits.rtf in Resources */,
 				D3D0C4C9131FF55200905509 /* InfoPlist.strings in Resources */,
-				D3D0C4CA131FF55200905509 /* appl.icns in Resources */,
 				D3D0C4CB131FF55200905509 /* prettyxml.xsl in Resources */,
 				D3D0C4CC131FF55200905509 /* wsdl2html.xsl in Resources */,
 				D3D0C4CD131FF55200905509 /* wsdl2html.css in Resources */,
 				D3D0C4CE131FF55200905509 /* wsdl2html.js in Resources */,
-				D3D0C4CF131FF55200905509 /* file.icns in Resources */,
 				D3D0C4D0131FF55200905509 /* headerNames.plist in Resources */,
 				D3D0C4D1131FF55200905509 /* headerValues.plist in Resources */,
-				D3D0C4D2131FF55200905509 /* SOAP_Client.png in Resources */,
 				D3D0C4D3131FF55200905509 /* MainMenu.xib in Resources */,
 				D3D0C4D4131FF55200905509 /* SCWindow.xib in Resources */,
 				D3D0C4D5131FF55200905509 /* WSDLViewWindow.xib in Resources */,
 				D3D0C4D6131FF55200905509 /* PreferenceWindow.xib in Resources */,
+				D351233C132D10A60008E842 /* iTunesArtwork.png in Resources */,
+				D351233D132D10A60008E842 /* soapclient.icns in Resources */,
+				D351233E132D10A60008E842 /* soapclientdoc.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../Keychain/build/Release\"";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -628,6 +629,7 @@
 					ppc,
 					i386,
 				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../Keychain/build/Release\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -645,6 +647,8 @@
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = NO;
@@ -658,14 +662,19 @@
 				LIBXML_PREFIX = /usr/include/libxml2;
 				LIBXSLT_PREFIX = /usr/include/libxslt;
 				MACH_O_TYPE = mh_execute;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Todd Ditchendorf";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = NO;
@@ -680,17 +689,18 @@
 				LIBXSLT_PREFIX = /usr/include/libxslt;
 				MACH_O_TYPE = mh_execute;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
 		D3D0C4F7131FF55200905509 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ONLY_ACTIVE_ARCH_PRE_XCODE_3_1)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../Keychain/build/Release\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -699,9 +709,10 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "SCFluid-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				ONLY_ACTIVE_ARCH_PRE_XCODE_3_1 = "$(NATIVE_ARCH_ACTUAL)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Fluid;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -710,11 +721,10 @@
 		D3D0C4F8131FF55200905509 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Todd Ditchendorf";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../Keychain/build/Release\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -722,7 +732,8 @@
 				INFOPLIST_FILE = "SCFluid-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = Fluid;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};

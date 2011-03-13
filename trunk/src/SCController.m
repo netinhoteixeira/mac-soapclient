@@ -512,7 +512,7 @@ static AGRegex *regex;
 
 - (void)log:(NSString *)msg;
 {
-	NSLog(@"%@", msg);
+	//NSLog(@"%@", msg);
 }
 
 
@@ -749,7 +749,7 @@ static AGRegex *regex;
 	CFHTTPMessageRef res = NULL;
 		
 	NSDictionary *reqHeaders = [(NSDictionary *)CFHTTPMessageCopyAllHeaderFields(req) autorelease];
-	NSLog(@"reqHeaders: %@", reqHeaders);
+	//NSLog(@"reqHeaders: %@", reqHeaders);
 	
 	// create stream
 	CFReadStreamRef stream = CFReadStreamCreateForHTTPRequest(kCFAllocatorDefault, req);
@@ -791,7 +791,7 @@ static AGRegex *regex;
 		}
 
 		reqHeaders = [(NSDictionary *)CFHTTPMessageCopyAllHeaderFields(req) autorelease];
-		NSLog(@"reqHeaders: %@", reqHeaders);
+		//NSLog(@"reqHeaders: %@", reqHeaders);
 
 		// create new stream
 		if (stream) {
@@ -894,7 +894,7 @@ leave:
 
 	
 	NSDictionary *headers = [(NSDictionary *)CFHTTPMessageCopyAllHeaderFields(res) autorelease];
-	NSLog(@"res headers: %@", headers);
+	//NSLog(@"res headers: %@", headers);
 
 	CFHTTPAuthenticationRef auth = CFHTTPAuthenticationCreateFromResponse(kCFAllocatorDefault, res);
 	NSString *scheme = [(NSString *)CFHTTPAuthenticationCopyMethod(auth) autorelease];
@@ -902,9 +902,9 @@ leave:
 	NSArray *domains = [(NSArray *)CFHTTPAuthenticationCopyDomains(auth) autorelease];
 	NSURL *domain = ([domains count]) ? [domains objectAtIndex:0] : nil;
 
-	NSLog(@"scheme: %@", scheme);
-	NSLog(@"realm: %@", realm);
-	NSLog(@"domains: %@", domains);
+	//NSLog(@"scheme: %@", scheme);
+	//NSLog(@"realm: %@", realm);
+	//NSLog(@"domains: %@", domains);
 	
 	//NSString *authHeaderVal = [self valueForKey:@"www-authenticate" fromHeaders:headers];
 	

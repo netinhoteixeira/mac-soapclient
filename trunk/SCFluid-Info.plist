@@ -12,7 +12,7 @@
 				<string>soapclient</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>file.icns</string>
+			<string>soapclientdoc.icns</string>
 			<key>CFBundleTypeName</key>
 			<string>SOAP Client Document</string>
 			<key>CFBundleTypeOSTypes</key>
@@ -28,7 +28,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>appl</string>
+	<string>soapclient.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.fluidapp.FluidApp</string>
 	<key>CFBundleInfoDictionaryVersion</key>
